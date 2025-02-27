@@ -1,0 +1,89 @@
+<link rel="stylesheet" href="styles/drops.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>nyanza//portfolio</title>
+
+<div class="tint"></div>
+
+<div class="contentArea">
+  <ul>
+    <strong><li><a href="index.html">- back</a></li></strong>
+  </ul>
+  <!-- Add your images here, no borders -->
+  <div class="gallery">
+    <img src="https://cdn.discordapp.com/attachments/1343707029138706563/1344538137493245982/HeliosUndefeated.png?ex=67c1eef8&is=67c09d78&hm=de211b61e1c97b8a73b99facf18d331049b1e8171ee31c03861f33375c92b26f&">
+    <img src="https://cdn.discordapp.com/attachments/1343707029138706563/1344584426687823943/rgrsgrsgwrsgwrgwrgrw.jpg?ex=67c21a14&is=67c0c894&hm=9ba5d3e60e2a2e63301a0129dda771bc85eba5295832e1749079b688cbb3993d&">
+    <img src="https://cdn.discordapp.com/attachments/1343707029138706563/1344584426687823943/rgrsgrsgwrsgwrgwrgrw.jpg?ex=67c21a14&is=67c0c894&hm=9ba5d3e60e2a2e63301a0129dda771bc85eba5295832e1749079b688cbb3993d&">
+    <img src="https://cdn.discordapp.com/attachments/1343707029138706563/1344584426687823943/rgrsgrsgwrsgwrgwrgrw.jpg?ex=67c21a14&is=67c0c894&hm=9ba5d3e60e2a2e63301a0129dda771bc85eba5295832e1749079b688cbb3993d&">
+    <!-- Add more images as needed -->
+  </div>
+</div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+</div>
+
+<!-- JavaScript -->
+<script>
+  // Get all images in the gallery
+  var images = document.querySelectorAll('.gallery img');
+
+  // Get the modal
+  var modal = document.getElementById("myModal");
+
+  // Get the image and insert it inside the modal
+  var modalImg = document.getElementById("img01");
+
+  // Loop through all images and add an event listener for the click event
+  images.forEach(function(image) {
+    image.onclick = function() {
+      modal.style.display = "block";
+      modalImg.src = this.src;
+    }
+  });
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+</script>
+
+<!-- Additional CSS for scaling the expanded image -->
+<style>
+  .modal-content {
+    max-width: 90%; /* Limit the maximum width */
+    max-height: 90%; /* Limit the maximum height */
+    margin: auto;
+    display: block;
+    object-fit: contain; /* Ensure the image scales proportionally */
+  }
+
+  /* Modal styles */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scrolling if needed */
+    background-color: rgba(0, 0, 0, 0.8); /* Black with opacity */
+    padding-top: 60px;
+    text-align: center;
+  }
+
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+  }
+</style>
