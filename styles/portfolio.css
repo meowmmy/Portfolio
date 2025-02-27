@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Major+Mono+Display');
+
+html {
+  background: url(https://i.pinimg.com/originals/5d/9e/09/5d9e0954596a742949482a04d5dab87f.gif) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.tint {
+  background-color: black;
+  position: fixed; /* Position fixed to the entire viewport */
+  margin: auto;
+  opacity: 0.8;
+  height: 100%; /* Ensure it covers the full height */
+  width: 100%; /* Ensure it covers the full width */
+  top: 0;
+  left: 0;
+  z-index: -1; /* Make sure it stays behind the content */
+}
+
+
+.contentArea {
+  position: absolute;
+  margin: auto;
+  height: 50%;
+  width: 70%;
+  bottom: 0%;
+  right: 0%;
+  left: 0%;
+  top: 0%;
+  min-height: calc(50px + 550px); /* Adds extra space at the bottom */
+}
+
+
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery img {
+  width: 200px;  /* Image size */
+  margin: 10px;
+  cursor: pointer;
+}
+
+ul {
+  font-family: 'Major Mono Display', monospace;
+  list-style-position: inside;
+  list-style-type: none;
+  padding-right: 45px;
+  text-align: center;
+  color: white;
+}
+
+li {
+  padding: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  background-color: #ba0189;
+}
+
+p {
+  font-family: 'Major Mono Display', monospace;
+  color: white;
+}
+
+/* Modal styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scrolling if needed */
+  background-color: rgba(0, 0, 0, 0.8); /* Black with opacity */
+  padding-top: 60px;
+  text-align: center;
+}
+
+.modal-content {
+  max-width: 80%;
+  height: auto;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  color: white;
+  font-size: 35px;
+  font-weight: bold;
+}
