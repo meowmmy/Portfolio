@@ -1,1 +1,36 @@
-# Portfolio
+<link rel="stylesheet" href="styles/main.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>nyanza</title>
+<div class="tint"></div>
+<script>
+  function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('time').innerHTML =
+      "[" + h + ":" + m + "]";
+    var t = setTimeout(startTime, 500);
+  }
+
+  function checkTime(i) {
+    if (i < 10) {
+      i = "0" + i
+    };
+    return i;
+  }
+
+</script>
+<body onload="startTime()">
+  <div class="contentArea">
+    <h1>
+      <highlight>NYANZA</highlight>
+    </h1>
+    <div id="time" class="time"></div>
+    <ul>
+      <li><a href="portfolio.html">+ portfolio</a></li>
+      <li><a href="contact.html">+ contact</a></li>
+    </ul>
+  </div>
